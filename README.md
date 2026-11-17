@@ -20,6 +20,7 @@ Most GPS trackers are either too bulky, too power-hungry, too closed, or too dep
 
 LumiTag explores a different direction:
 
+* Wi-Fi-first prototyping, with NB-IoT reserved for later low-power wide-area connectivity
 * Low-power NB-IoT communication
 * Simple GNSS location reporting
 * Always-readable E-Ink status display
@@ -33,6 +34,7 @@ The goal is to build a quiet, reliable safety tag.
 ## Core Features
 
 * ESP32-based firmware
+* Wi-Fi connectivity for prototyping
 * NB-IoT cellular connectivity
 * GNSS positioning
 * 1.54-inch SPI E-Ink display
@@ -213,10 +215,15 @@ LumiTag is currently in the early prototype stage.
 The current focus is:
 
 1. Hardware wiring
-2. E-Ink display bring-up
-3. NB-IoT communication
+2. Wi-Fi connectivity and cloud API development
+3. E-Ink display bring-up
 4. GNSS location acquisition
-5. Power consumption testing
+5. NB-IoT communication after the SIM is restored
+6. Power consumption testing
+
+## Current Network Strategy
+
+Until the NB-IoT SIM is restored, the prototype uses ESP32 2.4 GHz Wi-Fi to develop local connectivity and cloud flows. Alibaba Cloud IoT Platform now contains the `LumiTag` product and `LumiTag_ESP32_01` prototype device. `firmware/LumiTagWiFi` provides an interactive MQTT test that keeps credentials out of flash; see the [firmware notes](firmware/README.md).
 
 ## License
 
