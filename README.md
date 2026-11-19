@@ -225,6 +225,8 @@ The current focus is:
 
 Until the NB-IoT SIM is restored, the prototype uses ESP32 2.4 GHz Wi-Fi to develop local connectivity and cloud flows. Alibaba Cloud IoT Platform now contains the `LumiTag` product and `LumiTag_ESP32_01` prototype device. `firmware/LumiTagWiFi` provides an interactive MQTT test that keeps credentials out of flash; see the [firmware notes](firmware/README.md).
 
+The physical prototype has verified DNS resolution, TCP port `8883`, server-certificate validation, TLS MQTT connection, `user/update` telemetry publishing, and Alibaba Cloud IoT runtime-log storage in SLS. This acceptance is limited to the Wi-Fi prototype path; it does not validate NB-IoT, GNSS, E-Ink, deep sleep, or battery life.
+
 ## License
 
 This project is planned to be released as open source.

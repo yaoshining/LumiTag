@@ -1,5 +1,11 @@
 schema: spec-driven
 
+context: |
+  默认使用中文编写 OpenSpec 工件和项目文档。
+  明确区分源代码、编译、云端控制台、物理设备和生产环境的验收层级。
+  不得在任何工件中记录设备密钥、Wi-Fi 密码、SIM 标识、Cookie 或私网地址。
+  NB-IoT、GNSS、墨水屏、深度睡眠和续航在实际验证前不得标为已完成。
+
 # Project context (optional)
 # Add only constraints that should guide OpenSpec artifacts and workflows.
 # Include constraints an agent cannot infer by reading the code.
